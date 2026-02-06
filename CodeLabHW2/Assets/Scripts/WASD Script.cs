@@ -20,8 +20,9 @@ public class WASDScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
-        
+    {
+        if (rb.position.x < 9 && rb.position.x > -9)
+        {
             if (Input.GetKey(upwardKey))
             {
                 rb.AddForce(Vector3.up * forceAmount);
@@ -46,6 +47,11 @@ public class WASDScript : MonoBehaviour
             {
                 rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
             }
-        
+        }
+
+        else
+        {
+            forceAmount = 0f;
+        }
     }
 }

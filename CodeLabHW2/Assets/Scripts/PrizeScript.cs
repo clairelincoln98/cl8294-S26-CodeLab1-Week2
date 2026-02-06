@@ -17,6 +17,6 @@ public class PrizeScript : MonoBehaviour
         
         transform.position = newPosition;
 
-        GameManager.instance.score++;
+        GameManager.instance.time++;
     }
 }

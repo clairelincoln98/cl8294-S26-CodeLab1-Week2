@@ -12,7 +12,12 @@ public float enemyNumber;
     {
         for (var i = 0; i < enemyNumber; i++)
         {
-            Instantiate(enemy, new Vector3 (Random.Range (-10, 10), Random.Range (-4, 4), 0), Quaternion.identity);
+            Instantiate(enemy, new Vector3 (Random.Range (2, 10), Random.Range (-4, 4), 0), Quaternion.identity);
+        }
+        
+        for (var i = 0; i < enemyNumber; i++)
+        {
+            Instantiate(enemy, new Vector3 (Random.Range (-10, -2), Random.Range (-4, 4), 0), Quaternion.identity);
         }
     }
 

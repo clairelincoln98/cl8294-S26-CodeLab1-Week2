@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int score = 0;
+    public float time;
     
-    public int targetScore = 3;
+    public int targetTime = 10;
     
     public int currentLevel = 0;
 
@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     
     public TMP_Text scoreText;
 
-    string defaultScoreText = "Score: <score> Target: <target>";
+    string defaultScoreText = "Survive: <targetTime> TimePassed: <time>";
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,17 +33,19 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
         string updatedScoreText = defaultScoreText;
 
-        updatedScoreText = updatedScoreText.Replace("<score>", score + "");
-        updatedScoreText = updatedScoreText.Replace("<target>", targetScore + "");
+        updatedScoreText = updatedScoreText.Replace("<time>", time + "");
+        updatedScoreText = updatedScoreText.Replace("<targetTime>", targetTime + "");
         
         scoreText.text = updatedScoreText;
 
-        if (score >= targetScore)
+        if (time >= targetTime)
         {
+            time = 0;
             currentLevel++;
-            targetScore = targetScore * 2;
+            targetTime = targetTime * 2;
             SceneManager.LoadScene(currentLevel);
         }
 
