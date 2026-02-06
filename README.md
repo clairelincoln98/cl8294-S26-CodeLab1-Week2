@@ -1,5 +1,7 @@
-# FILL IN INFO ABOUT YOUR GAME HERE. 
+# A SIMPLE DODGING GAME
 
-DO NOT LEAVE IT LIKE THIS!!!
+AVOID THE ENEMIES AND SURVIVE TO THE NEXT ROUND. 
 
-Please? Please, give me content. I'm begging you. It's not that hard. Thanks.
+P.S. I'm sorry this is so basic, I'm using a broken computer and it is very very difficult to work on. My work will improve once my new machine arrives
+
+
